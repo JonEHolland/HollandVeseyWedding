@@ -1,0 +1,22 @@
+{
+  "name": "HollandVeseyWedding",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/JonEHolland/HollandVeseyWedding.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JonEHolland/HollandVeseyWedding/issues"
+  },
+  "homepage": "https://github.com/JonEHolland/HollandVeseyWedding",
+  "dependencies": {
+    "express": "^4.12.3"
+  }
+}
