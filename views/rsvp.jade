@@ -1,4 +1,14 @@
-extends layout
-
-block content
-  h1 RSVP
+html
+	head
+		title Guest RSVP Report
+	body
+		h1 Guest RSVP Report
+		h3 #{results.length} RSVPs
+		table(cellpadding=1, cellspacing=1, border=2)
+			tr
+				th Guest Name
+				th Guest Count
+			- each guest in results
+				tr
+					td=guest.name
+					td=guest.guestcount
