@@ -13,7 +13,7 @@ head
 	meta(name="viewport", content="width=device-width, initial-scale=1.0")
 	link(rel="stylesheet", type="text/css",media="screen",href="stylesheets/bootstrap.min.css")
 	link(rel="stylesheet", type="text/css",href="stylesheets/main.css")
-	link(rel="stylesheet", type="text/css",href="http://fonts.googleapis.com/css?family=Open+Sans:400,300italic,300,400italic,600italic,600,700italic,700")
+	link(rel="stylesheet", type="text/css",href="//fonts.googleapis.com/css?family=Open+Sans:400,300italic,300,400italic,600italic,600,700italic,700")
 	link(rel="stylesheet", href="stylesheets/font-awesome.min.css")
 body(onload="load()", onUnload="GUnload()")
 	div(class="wrapper", id="wrapper")
@@ -41,10 +41,10 @@ body(onload="load()", onUnload="GUnload()")
 													a(href="#theCouple") The Couple
 												li(class="menuItem", id="weddingPart")
 													a(href="#weddingParty") Wedding Party
+												li(class="menuItem", id="registry")
+													a(href="#registry") Registry
 												li(class="menuItem", id="directions")
-													a(href="#directions") Directions
-												li(class="menuItem", id="rsvp")
-													a(href="#rsvp") RSVP
+													a(href="#rsvp") Directions / RSVP
 
 			div(class="banner row", id="banner")
 				div(class="col-xs-12 col-sm-6 col-md-12 col-lg-12 noPadd slides-container" style="height:100%")
@@ -60,7 +60,6 @@ body(onload="load()", onUnload="GUnload()")
 								p(class="downArrow")
 									a(href="")
 										i(class="fa fa-chevron-down")
-						img(src="/images/amyjon1.jpg")
 					div(class="slide")
 						div(class="container header-inner")
 							div(class="bannerText clearfix")
@@ -73,7 +72,6 @@ body(onload="load()", onUnload="GUnload()")
 								p(class="downArrow")
 									a(href="")
 										i(class="fa fa-chevron-down")
-						img(src="/images/amyjon1.jpg")
 
 		section(class="yellow_section section_gap" id="theCouple")
 			div(class="container")
@@ -104,7 +102,8 @@ body(onload="load()", onUnload="GUnload()")
 				div(class="row bride")
 					ul(class="clearfix")
 						li(class="col-xs-12 col-sm-4 col-md-3 col-lg-3 pinkCircle")
-							div(class="nameCircle") Brides Maids
+							div(class="nameCircle")
+								em Brides Maids
 						li(class="ol-xs-12 col-sm-2 col-md-3 col-lg-3 circle")
 							img(src="images/miranda.jpg", class="smallRound")
 							h4 Miranda Yarbrough
@@ -121,7 +120,8 @@ body(onload="load()", onUnload="GUnload()")
 				div(class="row groom")
 					ul(class="clearfix")
 						li(class="col-xs-12 col-sm-4 col-md-3 col-lg-3 blueCircle")
-							div(class="nameCircle") Grooms Men
+							div(class="nameCircle")
+								em Grooms Men
 						li(class="ol-xs-12 col-sm-2 col-md-3 col-lg-3 circle")
 							img(src="images/corey.jpg", class="smallRound")
 							h4 Corey Sunwold
@@ -135,6 +135,18 @@ body(onload="load()", onUnload="GUnload()")
 							h4 Paolo Ciccu
 								span Groomsman
 
+		section(class="white_section section_gap" id="registry")
+			div(class="container")
+				div(class="row heading")
+					div(class="col-xs-12 col-sm-12 col-md-4 col-lg-4 noPadd")
+						h2 Registry
+
+		section(class="white_section section_gap" id="rsvp")
+			div(class="container")
+				div(class="row heading")
+					div(class="col-xs-12 col-sm-12 col-md-4 col-lg-4 noPadd")
+						h2 RSVP
+							span JOIN OUR PARTY
 
 		block content
 	
@@ -146,7 +158,7 @@ body(onload="load()", onUnload="GUnload()")
 						i(class="fa fa-chevron-up")
 
 	script(type="text/javascript", src="javascripts/modernizr.custom.26633.js")
-	script(type="text/javascript", src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js")
+	script(type="text/javascript", src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.js")
 	script(type="text/javascript", src="javascripts/bootstrap.min.js")
 	script(type="text/javascript", src="javascripts/jquery.placeholder.js")
 	script(type="text/javascript", src="javascripts/stickUp.js")
@@ -166,8 +178,8 @@ body(onload="load()", onUnload="GUnload()")
 						0: 'banner',
 						1: 'theCouple',
 						2: 'weddingParty',
-						3: 'directions',
-						4: 'rsvp'
+						3: 'registry',
+						4: 'directions'
 					},
 					itemClass: 'menuItem',
 					itemHover: 'active',
