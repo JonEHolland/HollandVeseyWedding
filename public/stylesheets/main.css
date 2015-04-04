@@ -778,10 +778,11 @@ ul.theCouple li{
     color: #fff;
     display: inline-block;
     font-family: "Great Vibes",cursive;
-    font-size: 42px;
-    line-height: 42px;
+    font-size: 52px;
+    line-height: 62px;
     text-align: center;
 	margin-left:-10px;
+	margin-top: 45px;
 }
 .circle {
 	padding-top:22px;

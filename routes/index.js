@@ -30,14 +30,4 @@ router.post('/rsvp', function(req, res, next) {
  	});
 });
 
-// GET Directions Page
-router.get('/directions', function(req, res, next) {
-	res.render('directions');
-});
-
-// GET Registry Page
-router.get('/registry', function(req, res, next) {
-	res.render('registry');
-});
-
 module.exports = router;
