@@ -1,3 +1,4 @@
+process.env.DATABASE_URL = 'postgres://fzroccoowqgivw:l4VI3djWwJEqsZQykaAYtLBL7u@ec2-23-21-73-32.compute-1.amazonaws.com:5432/d3qqtsja3k1upq?ssl=true&sslfactory=org.postgresql.ssl.NonValidatingFactory';
 
 var express = require('express');
 var pg = require('pg');
