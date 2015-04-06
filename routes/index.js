@@ -23,7 +23,7 @@ router.get('/rsvp', function(req, res, next) {
 });
 
 router.post('/rsvp', function(req, res, next) {
-	pg.connect(process.env.DATABASE_URL, function(err, client, done) {
+    pg.connect(process.env.DATABASE_URL, function(err, client, done) {
     	client.query('insert into rsvp values ($1,$2)',[req.body.guestName, req.body.guestCount]);
     	done();
     	res.redirect('/');
