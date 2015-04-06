@@ -1,0 +1,15 @@
+extends layout.jade
+
+block content
+	section(class="white_section section_gap")
+		div(class="container")
+			div(class="row")
+				h1 Hmmm....
+
+				p There were some problems with your submission. Go back and check this:
+
+				ul
+					- each error in errors
+						li= error.msg
+
+				a(href="/") Go Back

@@ -1,0 +1,18 @@
+extends layout.jade
+
+block content
+	section(class="white_section section_gap")
+		div(class="container")
+			div(class="row")
+				h4 Guest RSVP Report
+				h4 #{results.length} RSVPs
+				table(cellpadding=10, cellspacing=10, border=2)
+					tr
+						th Guest Name
+						th Guest Email
+						th Guest Count
+					- each guest in results
+						tr
+							td=guest.guestname
+							td=guest.guestemail
+							td=guest.guestcount
