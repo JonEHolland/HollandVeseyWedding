@@ -36,6 +36,7 @@ body
 	script(type="text/javascript", src="javascripts/jquery.placeholder.js")
 	script(type="text/javascript", src="javascripts/stickUp.js")
 	script(type="text/javascript", src="javascripts/jquery.superslides.js")
+	script(type="text/javascript", src="javascripts/ICanHaz.min.js")
 
 	script(type="text/javascript").
 		$('#banner').superslides({
@@ -59,6 +60,11 @@ body
 					itemHover: 'active',
 					topMargin: 'auto'
 					});	
+
+				$.getJSON( "/macys", function(data) {
+					var rendered = ich.registryTemplate(data);
+					$('#registry-list').append(rendered);
+				});
 			});
 		});
 

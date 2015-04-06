@@ -31,7 +31,7 @@ router.get('/macys', function(req, res, next) {
             });
         }
 
-        res.json(registryItems);
+        res.json({ items : registryItems });
     });
 });
 
