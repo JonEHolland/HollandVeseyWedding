@@ -449,7 +449,10 @@ ul.submenu{ display:none;}
     transition: all .5s;
 }
 
-
+.registryMessage {
+	margin: 130px 0 15px; 
+	text-align: center;
+}
 
 /*----------------------------------------------------
 	4. Start Section
@@ -884,6 +887,19 @@ input.normal, select.normal, textarea.normal {
 
 @media only screen and (min-width: 320px) and (max-width:991px) {
 	
+	.registryMessage {
+		margin: 0 0 0; 
+		text-align: center;
+	}
+
+	.registryResults {
+		margin-top: 45px;
+	}
+
+	.theCouple h3 {
+		margin-bottom: 50px;
+	}
+
 	.logo {
 		left:70px;
 	}
