@@ -887,6 +887,10 @@ input.normal, select.normal, textarea.normal {
 
 @media only screen and (min-width: 320px) and (max-width:991px) {
 	
+	.joinourParty {
+		margin-bottom: 50px;
+	}
+	
 	.registryMessage {
 		margin: 0 0 0; 
 		text-align: center;
