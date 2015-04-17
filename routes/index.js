@@ -1,3 +1,4 @@
+
 var express = require('express');
 var pg = require('pg');
 var http = require('follow-redirects').http;
@@ -38,7 +39,7 @@ router.get('/macys', function(req, res, next) {
 // GET RSVP Report Page
 router.get('/rsvpreport', function(req, res, next) {
 	pg.connect(process.env.DATABASE_URL, function(err, client, done) {
-    	client.query('SELECT * FROM rsvp', function(err, result) {
+    	client.query('SELECT * FROM rsvp ORDER BY guestattending DESC', function(err, result) {
     		done();
     		if (err) {
     			console.error(err);
@@ -51,7 +52,14 @@ router.get('/rsvpreport', function(req, res, next) {
 router.post('/rsvp', function(req, res, next) {
     
     req.checkBody('guestName', 'Guest name is required').notEmpty();
-    req.checkBody('guestTotal', 'Guest count is required').notEmpty();
+    
+    // Lol node.js is so shitty
+    if(req.body.guestAttending != 'false') {
+        req.checkBody('guestTotal', 'Guest count is required').notEmpty();
+    } else {
+        req.body.guestTotal = 0;
+    }
+
     req.checkBody('guestEmail', 'Email is required').notEmpty();
     req.checkBody('guestEmail', 'Email does not appear to be valid').isEmail();
 
@@ -65,10 +73,12 @@ router.post('/rsvp', function(req, res, next) {
     }
     
     pg.connect(process.env.DATABASE_URL, function(err, client, done) {
-    	client.query('insert into rsvp values ($1,$2,$3)', [
+    	console.log(req.body);
+        client.query('insert into rsvp values ($1,$2,$3,$4)', [
             req.body.guestName, 
             req.body.guestEmail, 
-            req.body.guestTotal]);
+            req.body.guestTotal,
+            req.body.guestAttending]);
     	done();
     	res.render('rsvpSubmit');
  	});

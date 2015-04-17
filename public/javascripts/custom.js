@@ -25,6 +25,14 @@
     }
 	});
 	
+	$('input[type=radio][name=guestAttending]').change(function() {
+        if (this.value == 'true') {
+            $("#guestTotalRow").show();
+        }
+        else if (this.value == 'false') {
+            $("#guestTotalRow").hide();
+        }
+    });
 	
 	if($(window).width()<1000){
 		$('.navbar-nav li a').on( "click", function() {

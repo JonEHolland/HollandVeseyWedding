@@ -11,8 +11,10 @@ block content
 						th Guest Name
 						th Guest Email
 						th Guest Count
+						th Attending
 					- each guest in results
 						tr
 							td=guest.guestname
 							td=guest.guestemail
 							td=guest.guestcount
+							td=guest.guestattending

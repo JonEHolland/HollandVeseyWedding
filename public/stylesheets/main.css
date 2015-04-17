@@ -726,14 +726,20 @@ ul.theCouple li{
 	color:#333850;
 	display:block;
 }
-.form-container .heartline{ 
-	margin-bottom:30px;
-	}
+
 .form-row {
 	margin-bottom:30px;
 	font-size:0;
 	letter-spacing:0;
 }
+
+.form-radio {
+	margin-bottom:20px;
+	font-family: "Open Sans",sans-serif;
+  	font-size: 15px;
+  	font-weight: 400;
+}
+
 input.normal,
 select.normal,
 textarea.normal{
